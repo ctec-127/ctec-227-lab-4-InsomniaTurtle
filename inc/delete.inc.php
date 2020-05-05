@@ -11,7 +11,7 @@ if (is_dir($dir)) {
             if (!is_dir($filename)) {
                 $filename = urlencode($filename);
                 echo "<div><img src=\"uploads/$filename\" alt=\"File Image\" height=\"200\"></div>";
-                echo "a href=\"delete.inc.php?file=$filename\">Delete this image</a>";
+                echo "<a href=\"delete.inc.php?file=$filename\">Delete this image</a>";
             }
         }
         closedir($dir_handle);
