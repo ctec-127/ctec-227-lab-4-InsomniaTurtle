@@ -1,0 +1,20 @@
+body {
+    background-color: cornsilk;
+}
+
+.gallery_title {
+    background-color: cornflowerblue;
+    border-style: groove;
+    border-width: 0.5rem;
+    border-color: cadetblue;
+    text-align: center;
+    color: whitesmoke;
+    margin: 2rem;
+}
+
+.gallery_content {
+    background-color: crimson;
+    border-style: groove;
+    border-width: 0.5rem;
+    border-color: brown;
+}
