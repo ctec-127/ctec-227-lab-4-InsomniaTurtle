@@ -1,4 +1,7 @@
-<?php include "delete.php" ?>
+<?php
+require_once "inc/delete.inc.php";
+require_once "inc/functions.inc.php";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -62,6 +65,9 @@
                 <input type="file" name="file_upload">
                 <input type="submit" name="submit" value="Upload">
             </form>
+
+            <?php show_images(); ?>
+
         </div>
     </div>
 </body>
