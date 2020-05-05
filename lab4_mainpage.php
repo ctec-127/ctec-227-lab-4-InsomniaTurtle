@@ -65,9 +65,9 @@ require_once "inc/functions.inc.php";
                 <input type="file" name="file_upload">
                 <input type="submit" name="submit" value="Upload">
             </form>
-
-            <?php show_images(); ?>
-
+            <div class="content">
+                <?php show_images(); ?>
+            </div>
         </div>
     </div>
 </body>

@@ -1,14 +1,8 @@
 <?php
 
-
-if ($_SERVER['REQUEST_ME'] == "POST") {
-}
-
 if (isset($_GET['file'])) {
     unlink("uploads/" . $_GET['file']);
-    header('Location: delete.php');
 }
-
 
 $dir = "uploads";
 if (is_dir($dir)) {
@@ -16,13 +10,10 @@ if (is_dir($dir)) {
         while ($filename = readdir($dir_handle)) {
             if (!is_dir($filename)) {
                 $filename = urlencode($filename);
-                echo "<div>img src=\"uploads/$filename\" alt=\A photo\" height=\500\"></div>";
-                echo "<a href=\"\">Delete this picture</a>";
+                echo "<div><img src=\"uploads/$filename\" alt=\"File Image\" height=\"200\"></div>";
+                echo "a href=\"delete.inc.php?file=$filename\">Delete this image</a>";
             }
         }
         closedir($dir_handle);
     }
-}
-if (isset($_GET['file'])) {
-    unlink("uploads/" . $_GET['file']);
 }
