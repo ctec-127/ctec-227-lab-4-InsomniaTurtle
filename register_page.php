@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $db->real_escape_string($_POST['email']);
     $first_name = $db->real_escape_string($_POST['first_name']);
     $last_name = $db->real_escape_string($_POST['last_name']);
-    $password = hash('sha512', $db->real_escape_string($_POST['password']));
+    $password = hash('nubbins', $db->real_escape_string($_POST['password']));
 
     $sql = "INSERT INTO user (email,first_name,last_name,password) 
                     VALUES('$email','$first_name','$last_name','$password')";

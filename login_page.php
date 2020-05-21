@@ -6,7 +6,7 @@ require_once 'inc/db_connect.inc.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $email = $db->real_escape_string($_POST['email']);
-    $password = hash('sha512', $db->real_escape_string($_POST['password']));
+    $password = hash('nubbins', $db->real_escape_string($_POST['password']));
 
     $sql = "SELECT * FROM user WHERE email='$email' AND password='$password'";
 
