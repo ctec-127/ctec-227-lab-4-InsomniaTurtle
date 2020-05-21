@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "inc/delete.inc.php";
 require_once "inc/functions.inc.php";
 ?>
@@ -15,6 +16,9 @@ require_once "inc/functions.inc.php";
 
 <body>
     <div class="main_container">
+        <a href="register_page.php">Register me</a>
+        <a href="login_page.php" id="login">Log me in</a>
+        <a href="" id="logout">Log me out</a>
         <div class="gallery_title">
             <h1>Lab Four; Picture Gallery</h1>
         </div>
